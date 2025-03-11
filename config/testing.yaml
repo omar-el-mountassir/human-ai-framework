@@ -1,0 +1,21 @@
+# Testing environment configuration for Human-AI Interaction Framework
+
+# Logging configuration
+logging:
+  level: "DEBUG"
+  log_to_file: false
+
+# Testing-specific settings
+testing:
+  debug: true
+
+  # Test settings
+  test:
+    use_mocks: true
+    enable_coverage: true
+    verbose_output: true
+
+  # Paths for test data
+  paths:
+    test_data_dir: "tests/data"
+    test_output_dir: "tests/output"

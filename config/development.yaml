@@ -1,0 +1,22 @@
+# Development environment configuration for Human-AI Interaction Framework
+
+# Logging configuration
+logging:
+  level: "DEBUG"
+  log_to_file: true
+  log_file: "logs/human_ai_framework_dev.log"
+
+# Development-specific settings
+development:
+  debug: true
+  auto_reload: true
+
+  # Test features
+  features:
+    enable_experimental: true
+    mock_services: true
+
+  # Local development paths
+  paths:
+    data_dir: "dev_data"
+    output_dir: "dev_output"

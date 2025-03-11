@@ -1,0 +1,80 @@
+site_name: Human-AI Interaction Framework
+site_description: A robust, ethical, and transparent collaborative framework between human users and AI systems for digital product design and development.
+site_author: Omar El-Mountassir
+site_url: https://github.com/omar-el-mountassir/human-ai-framework
+
+repo_name: omar-el-mountassir/human-ai-framework
+repo_url: https://github.com/omar-el-mountassir/human-ai-framework
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            docstring_style: google
+          rendering:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_category_heading: true
+            show_if_no_docstring: false
+
+nav:
+  - Home: index.md
+  - User Guide:
+      - Installation: user-guide/installation.md
+      - Configuration: user-guide/configuration.md
+      - Command-Line Interface: user-guide/cli.md
+      - Programmatic Usage: user-guide/usage.md
+  - Framework:
+      - Core Concepts: framework/concepts.md
+      - Roles and Responsibilities: framework/roles.md
+      - Ethical Principles: framework/ethics.md
+      - Communication Protocols: framework/communication.md
+      - Feedback Mechanisms: framework/feedback.md
+      - Improvement Processes: framework/improvement.md
+  - API Reference:
+      - Core: api/core.md
+      - Models: api/models.md
+      - Services: api/services.md
+      - Utils: api/utils.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Testing: development/testing.md
+      - Documentation: development/documentation.md
+  - About:
+      - License: about/license.md
+      - Changelog: about/changelog.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/omar-el-mountassir
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/omar-el-mountassir

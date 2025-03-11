@@ -1,0 +1,24 @@
+# Production environment configuration for Human-AI Interaction Framework
+
+# Logging configuration
+logging:
+  level: "WARNING"
+  log_to_file: true
+  log_file: "/var/log/human_ai_framework/application.log"
+
+# Production-specific settings
+production:
+  debug: false
+  auto_reload: false
+
+  # Performance settings
+  performance:
+    cache_enabled: true
+    cache_timeout: 3600 # 1 hour
+    max_concurrent_requests: 100
+
+  # Security settings
+  security:
+    enable_strict_validation: true
+    rate_limiting: true
+    max_requests_per_minute: 60
