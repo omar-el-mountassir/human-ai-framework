@@ -1,0 +1,133 @@
+# Human-AI Interaction Framework Project Settings
+# This file defines project-specific conventions, settings, and workflows
+
+[project]
+name = "human-ai-framework"
+description = "A robust, ethical, and transparent collaborative framework between human users and AI systems for digital product design and development."
+repository = "https://github.com/omar-el-mountassir/human-ai-framework"
+license = "MIT"
+min_python_version = "3.8"
+max_python_version = "3.12"
+
+[development]
+# Development workflow settings
+default_branch = "main"
+release_branch_prefix = "release/"
+feature_branch_prefix = "feature/"
+bugfix_branch_prefix = "bugfix/"
+hotfix_branch_prefix = "hotfix/"
+commit_message_convention = "conventional" # https://www.conventionalcommits.org/
+versioning_scheme = "semver" # https://semver.org/
+
+[editor]
+# Editor and IDE settings
+indent_style = "space"
+indent_size = 4
+line_ending = "lf"
+charset = "utf-8"
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 88
+ruler_column = 88
+
+[editor.cursor]
+# Cursor behavior settings
+smart_indent = true
+auto_indent = true
+smart_brackets = true
+bracket_highlight = true
+highlight_matching_brackets = true
+highlight_current_line = true
+word_wrap = false
+cursor_blink_rate = 500 # in milliseconds
+cursor_style = "block" # block, line, underline
+cursor_smooth_caret_animation = true
+
+[code_style]
+# Code style conventions
+formatter = "black"
+linter = "ruff"
+type_checker = "mypy"
+docstring_style = "google"
+import_sorting = "isort"
+quote_style = "double"
+max_complexity = 10
+enforce_trailing_comma = true
+
+[testing]
+# Testing conventions and settings
+test_framework = "pytest"
+test_directory = "tests"
+unit_test_prefix = "test_"
+integration_test_prefix = "test_"
+coverage_threshold = 80
+test_file_naming = "{module_name}_test.py"
+mock_framework = "unittest.mock"
+
+[documentation]
+# Documentation conventions and settings
+documentation_tool = "mkdocs"
+documentation_theme = "material"
+api_documentation_tool = "mkdocstrings"
+changelog_format = "markdown"
+readme_sections = [
+    "Overview",
+    "Features",
+    "Installation",
+    "Usage",
+    "Project Structure",
+    "Development",
+    "License"
+]
+
+[ci_cd]
+# CI/CD settings
+ci_provider = "github_actions"
+test_on_push = true
+test_on_pull_request = true
+lint_on_push = true
+lint_on_pull_request = true
+release_requires_approval = true
+auto_deploy_tags = true
+publish_to_pypi = true
+
+[dependencies]
+# Dependency management settings
+dependency_manager = "uv"
+auto_update_dependencies = false
+dependency_groups = ["default", "dev", "docs", "test"]
+lockfile_update_frequency = "weekly"
+allowed_licenses = [
+    "MIT",
+    "BSD-3-Clause",
+    "BSD-2-Clause",
+    "Apache-2.0",
+    "Python-2.0"
+]
+
+[tasks]
+# Task tracking and management
+task_file = "TASKS.md"
+task_id_prefix = "HAIF"
+task_template = """
+## {task_id}: {task_title}
+
+**Priority:** {priority}
+**Component:** {component}
+**Assignee:** {assignee}
+**Due Date:** {due_date}
+**Status:** {status}
+**Labels:** {labels}
+
+### Description
+{description}
+
+### Acceptance Criteria
+- {criteria_1}
+- {criteria_2}
+- {criteria_3}
+
+### Dependencies
+- {dependency_1}
+- {dependency_2}
+""" 

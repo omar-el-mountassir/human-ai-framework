@@ -1,0 +1,129 @@
+{
+  // Editor settings
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.rulers": [88],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "off",
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "selection",
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  // Cursor behavior
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block",
+  "editor.cursorSurroundingLines": 8,
+  "editor.find.cursorMoveOnType": true,
+  "editor.multiCursorModifier": "alt",
+  "editor.stickyScroll.enabled": true,
+
+  // Files settings
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.py[cod]": true,
+    "**/*.so": true,
+    "**/.coverage": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+    ".venv": false
+  },
+  "files.watcherExclude": {
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.mypy_cache/**": true,
+    "**/.ruff_cache/**": true,
+    "**/.venv/**": true
+  },
+
+  // Python settings
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "src",
+      "depth": 5
+    }
+  ],
+
+  // Linting and formatting
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+  "python.linting.mypyArgs": [
+    "--config-file=${workspaceFolder}/pyproject.toml"
+  ],
+
+  // Testing
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
+  "python.testing.pytestArgs": ["tests"],
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}"
+  },
+
+  // Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.branchProtection": ["main"],
+  "git.branchSortOrder": "alphabetically",
+  "git.fetchOnPull": true,
+  "git.mergeEditor": true,
+
+  // Human-AI Framework specific settings
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1e2a38",
+    "titleBar.activeBackground": "#2b3e52",
+    "titleBar.activeForeground": "#e7e7e7",
+    "statusBar.background": "#2b3e52",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "medium",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.colorTheme": "Default Dark Modern",
+
+  // Extensions settings
+  "autoDocstring.docstringFormat": "google",
+  "autoDocstring.startOnNewLine": true,
+  "cSpell.words": [
+    "hatchling",
+    "mkdocs",
+    "mkdocstrings",
+    "mypy",
+    "pyyaml",
+    "pytest",
+    "ruff",
+    "haif"
+  ]
+}
